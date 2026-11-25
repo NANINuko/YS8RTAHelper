@@ -515,38 +515,6 @@ YS8RTAHelper/
 
 ---
 
-## Gitによる管理
-
-API認証情報や個人環境に依存する設定ファイル、生成済み音声などについては、必要に応じて `.gitignore` に登録してください。
-
-### .gitignore の設定例
-
-```gitignore
-# Python
-__pycache__/
-*.pyc
-.venv/
-venv/
-
-# 個人設定
-config.json
-steam_config.json
-audio_config.json
-
-# 自動生成データ
-audio_cache/
-records/
-
-# 一時ファイル
-*.tmp
-```
-
-`chart.json` および `maps/` は、攻略チャートや攻略マップを共有する場合に必要となるため、除外対象には含めていません。
-
-特に `audio_config.json` にはVoiSona TalkのAPI認証情報が平文で保存されるため、公開リポジトリにアップロードしないようにしてください。
-
----
-
 ## 注意事項
 
 - 本ツールはゲーム本体のファイルやメモリを書き換えません。
